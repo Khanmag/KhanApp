@@ -1,0 +1,9 @@
+.navbar_wrapper {
+    padding-top: 3px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar_wrapper > * {
+    margin: 0 5px;
+}
