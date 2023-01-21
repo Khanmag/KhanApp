@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/KhanApp/static/css/main.de5d472a.css",
+    "main.js": "/KhanApp/static/js/main.20e29fcf.js",
+    "index.html": "/KhanApp/index.html",
+    "main.de5d472a.css.map": "/KhanApp/static/css/main.de5d472a.css.map",
+    "main.20e29fcf.js.map": "/KhanApp/static/js/main.20e29fcf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de5d472a.css",
+    "static/js/main.20e29fcf.js"
+  ]
+}
