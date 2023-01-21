@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import styles from './Dictionary.module.css'
+import OptionsBlock from "./OptionsBlock";
+import {useSwipeable} from "react-swipeable";
 
 interface IWordItem {
     eng: string,
@@ -11,23 +13,58 @@ interface IWordItem {
 const Dictionary: React.FC = () => {
 
     const [words, setWords] = useState<IWordItem[]>([])
+    const [engVisible, setEngVisible] = useState(true)
+    const [ruVisible, setRuVisible] = useState(true)
 
     useEffect(() => {
         getDictData()
     }, [])
 
+    const handlers = useSwipeable({
+        onSwipedRight: () => {
+            setRuVisible(false)
+            setEngVisible(true)
+        },
+        onSwipedLeft: () => {
+            setRuVisible(true)
+            setEngVisible(false)
+        }
+    })
+
+
     const getDictData = async () => {
         const res = await axios.get('https://script.googleusercontent.com/macros/echo?user_content_key=S2d8mVvF4IKfiZJgCDzpG9NPq1uFAuXp6iHrT6RXVO1S1S15ZP-OqUruFDKfx04Liybwgol4C9H1IpAj0eHBglUNoLxUAhxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnK8JTV80DAM70lqzaoSvNgFiYcPCX2ORYzP6ofXJbGRX4x134KE8ru-t4t2PglDIm4qnr-FQMMknh5uUAZUmBPDTF55rsb8pUdz9Jw9Md8uu&lib=Mc_wHlyPaFfNQKzD9tI4gvJnPHQt2It8t')
         setWords(res.data)
     }
+
+    const toggleEngVisible = () => {
+        if (ruVisible) setEngVisible(!engVisible)
+
+    }
+    const toggleRuVisible = () => {
+        if (engVisible) setRuVisible(!ruVisible)
+    }
+    const shuffleWords = () => {
+        const newWordsOrder = [...words].sort(() => Math.random() > 0.5 ? 1 : -1)
+        setWords(newWordsOrder)
+    }
+
     if (words.length === 0) return <div>Loading..</div>
     return (
-        <div >
-            {words.length > 0 &&
+        <div {...handlers}
+        >
+            <OptionsBlock toggleEngVisible={toggleEngVisible}
+                          toggleRuVisible={toggleRuVisible}
+                          engVisible={engVisible}
+                          ruVisible={ruVisible}
+                          shuffleWords={shuffleWords}
+            />
+
+            {
                 words.map(word => (
                     <div className={styles.words_row_container} key={word.eng}>
-                        <div className={styles.word_wrapper}>{word.eng}</div>
-                        <DetachRuWords ruWords={word.ru}/>
+                        {engVisible && <div className={styles.word_wrapper}>{word.eng}</div>}
+                        {ruVisible && <DetachRuWords ruWords={word.ru}/>}
                     </div>
                 ))
             }

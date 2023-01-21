@@ -1,0 +1,50 @@
+.option_block {
+    display: flex;
+    align-items: center;
+}
+
+.visible_btn {
+    font-weight: bolder;
+    font-size: 10px;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+.visible_btn_active {
+    background-color: lightgray;
+    color: white;
+}
+.shuffle_btn:hover {
+    animation: rotate_arrow  0.5s running ease-in-out;
+}
+
+
+
+
+
+
+@keyframes rotate_arrow {
+    from {
+        transform: rotateX(0deg);
+    }
+    25% {
+        transform: rotateX(90deg) ;
+    }
+    50% {
+        transform: rotateX(180deg) ;
+    }
+    75% {
+        transform: rotateX(270deg) ;
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+
+
+
