@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/KhanApp/static/css/main.63d41b0a.css",
-    "main.js": "/KhanApp/static/js/main.7179be5c.js",
+    "main.css": "/KhanApp/static/css/main.1f58f940.css",
+    "main.js": "/KhanApp/static/js/main.2d239b7b.js",
     "static/media/cinema-icon-png-7.jpg": "/KhanApp/static/media/cinema-icon-png-7.e22ad1e888648e97b51c.jpg",
     "static/media/P1ZxZNr.png": "/KhanApp/static/media/P1ZxZNr.d3105ae967f1e58d7f1f.png",
     "static/media/opm.png": "/KhanApp/static/media/opm.4d7bfc16560d88c77e04.png",
+    "static/media/full_wheiagom.png": "/KhanApp/static/media/full_wheiagom.2d4738e011fb419da787.png",
     "static/media/OoGOwVq.png": "/KhanApp/static/media/OoGOwVq.f91325fc6b834ad89765.png",
     "static/media/dictionaryImage.png": "/KhanApp/static/media/dictionaryImage.08b8c141c5a1a8671339.png",
     "static/media/house.png": "/KhanApp/static/media/house.17e52db83442b6a081be.png",
     "static/media/cv.png": "/KhanApp/static/media/cv.191012305c563c88fb15.png",
     "index.html": "/KhanApp/index.html",
-    "main.63d41b0a.css.map": "/KhanApp/static/css/main.63d41b0a.css.map",
-    "main.7179be5c.js.map": "/KhanApp/static/js/main.7179be5c.js.map"
+    "main.1f58f940.css.map": "/KhanApp/static/css/main.1f58f940.css.map",
+    "main.2d239b7b.js.map": "/KhanApp/static/js/main.2d239b7b.js.map"
   },
   "entrypoints": [
-    "static/css/main.63d41b0a.css",
-    "static/js/main.7179be5c.js"
+    "static/css/main.1f58f940.css",
+    "static/js/main.2d239b7b.js"
   ]
 }
