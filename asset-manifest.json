@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/KhanApp/static/css/main.2ec607a7.css",
+    "main.css": "/KhanApp/static/css/main.a1007d56.css",
     "main.js": "/KhanApp/static/js/main.13f7ad72.js",
     "static/media/P1ZxZNr.png": "/KhanApp/static/media/P1ZxZNr.d3105ae967f1e58d7f1f.png",
     "static/media/OoGOwVq.png": "/KhanApp/static/media/OoGOwVq.f91325fc6b834ad89765.png",
     "static/media/house.png": "/KhanApp/static/media/house.17e52db83442b6a081be.png",
     "static/media/cv.png": "/KhanApp/static/media/cv.191012305c563c88fb15.png",
     "index.html": "/KhanApp/index.html",
-    "main.2ec607a7.css.map": "/KhanApp/static/css/main.2ec607a7.css.map",
+    "main.a1007d56.css.map": "/KhanApp/static/css/main.a1007d56.css.map",
     "main.13f7ad72.js.map": "/KhanApp/static/js/main.13f7ad72.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ec607a7.css",
+    "static/css/main.a1007d56.css",
     "static/js/main.13f7ad72.js"
   ]
 }
