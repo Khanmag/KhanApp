@@ -1,0 +1,15 @@
+.creativity_wrapper {
+    background-image: url("../../images/creativeBG.png");
+    width: 800px;
+    border: 1px solid black;
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.general_title {
+    text-align: center;
+    margin: 10px;
+    color: orange;
+}

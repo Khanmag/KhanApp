@@ -3,6 +3,7 @@ import axios from "axios";
 import styles from './Dictionary.module.css'
 import OptionsBlock from "./OptionsBlock";
 import {useSwipeable} from "react-swipeable";
+import Preloader from "../common/Preloader";
 
 interface IWordItem {
     eng: string,
@@ -20,26 +21,28 @@ const Dictionary: React.FC = () => {
         getDictData()
     }, [])
 
-    const handlers = useSwipeable({
-        onSwipedRight: () => {
-            setRuVisible(false)
-            setEngVisible(true)
-        },
-        onSwipedLeft: () => {
-            setRuVisible(true)
-            setEngVisible(false)
-        }
-    })
-
-
     const getDictData = async () => {
         const res = await axios.get('https://script.googleusercontent.com/macros/echo?user_content_key=S2d8mVvF4IKfiZJgCDzpG9NPq1uFAuXp6iHrT6RXVO1S1S15ZP-OqUruFDKfx04Liybwgol4C9H1IpAj0eHBglUNoLxUAhxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnK8JTV80DAM70lqzaoSvNgFiYcPCX2ORYzP6ofXJbGRX4x134KE8ru-t4t2PglDIm4qnr-FQMMknh5uUAZUmBPDTF55rsb8pUdz9Jw9Md8uu&lib=Mc_wHlyPaFfNQKzD9tI4gvJnPHQt2It8t')
         setWords(res.data)
     }
 
+
+    const rightSwap = () => {
+        if (engVisible) setRuVisible(false)
+        else setEngVisible(true)
+    }
+    const leftSwap = () => {
+        if (ruVisible) setEngVisible(false)
+        else setRuVisible(true)
+    }
+    const handlers = useSwipeable({
+        onSwipedRight: rightSwap,
+        onSwipedLeft: leftSwap
+    })
+
+
     const toggleEngVisible = () => {
         if (ruVisible) setEngVisible(!engVisible)
-
     }
     const toggleRuVisible = () => {
         if (engVisible) setRuVisible(!ruVisible)
@@ -49,7 +52,7 @@ const Dictionary: React.FC = () => {
         setWords(newWordsOrder)
     }
 
-    if (words.length === 0) return <div>Loading..</div>
+    if (words.length === 0) return <Preloader />
     return (
         <div {...handlers}
         >

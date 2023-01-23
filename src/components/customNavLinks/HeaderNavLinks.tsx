@@ -1,7 +1,6 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import s from './HeaderNavLinks.module.css'
-import {GiBookshelf} from 'react-icons/gi'
 
 
 

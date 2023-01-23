@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Comfortaa', cursive;
+    -webkit-tap-highlight-color: transparent;
 }
 body {
     /*height: 100vh;*/
@@ -12,14 +13,23 @@ body {
     width: 100%;
     background-color: dimgray;
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .main {
     max-width: 800px;
     margin: 0 auto;
-    min-height: 80vh ;
+    /*min-height: 80vh ;*/
+    min-height: calc(100vh - 50px);
     /*background-color: lightblue;*/
 }
 .footer {
     height: 50px;
     background-color: black;
+}
+@media (max-width: 600px) {
+    .header {
+        height: 0;
+    }
 }

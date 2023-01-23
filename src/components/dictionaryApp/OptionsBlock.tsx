@@ -1,6 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {useNavigate} from "react-router-dom";
+import {useSwipeable} from "react-swipeable";
 import s from './OptionsBlock.module.css'
-import {ImShuffle} from "react-icons/im";
+import backIcon from '../../images/backIcon.png'
+import plusIcon from '../../images/plusIcon.png'
+import engIcon from '../../images/engIcon.png'
+import ruIcon from '../../images/ruIcon.png'
+import shuffleIcon from '../../images/shuffleIcon.png'
 
 
 interface OptionsBlockProps {
@@ -13,31 +19,80 @@ interface OptionsBlockProps {
 
 const OptionsBlock: React.FC<OptionsBlockProps> = (
     {
-        toggleEngVisible, toggleRuVisible, ruVisible, engVisible,shuffleWords
+        toggleEngVisible,
+        toggleRuVisible,
+        ruVisible,
+        engVisible,
+        shuffleWords
     }
 ) => {
 
-    const ruBtnClasses = ruVisible ? `${s.visible_btn} ${s.visible_btn_active}` : s.visible_btn
-    const engBtnClasses = engVisible ? `${s.visible_btn} ${s.visible_btn_active}` : s.visible_btn
+    const [optionsVisible, setOptionsVisible] = useState(false)
+
+    const navigate = useNavigate()
+
+    const handlers = useSwipeable({
+        onSwipedLeft: () => setOptionsVisible(false)
+    })
+
+    const getBack = () => {
+        navigate(-1)
+    }
+    const openMenu = () => {
+        setOptionsVisible(!optionsVisible)
+    }
+    const openMenuBTNClasses = s.open_menu_btn + " " + (optionsVisible ? s.open_menu_btn_opened : "")
+
     return (
-        <div className={s.option_block}>
-            <button onClick={toggleEngVisible}
-                    className={engBtnClasses}
-            >
-                EN
-            </button>
-            <button onClick={toggleRuVisible}
-                    className={ruBtnClasses}
-            >
-                RU
-            </button>
-            <button onClick={shuffleWords}
-                    className={s.shuffle_btn + " " + s.visible_btn}
-            >
-                <ImShuffle size={20}/>
-            </button>
-        </div>
+        <>
+            <div {...handlers} className={s.option_block + " " + (optionsVisible ? s.option_active : "")}>
+                <CustomButtonWithImage onClickFunc={getBack}
+                                       src={backIcon}
+                />
+                <CustomButtonWithImage onClickFunc={toggleEngVisible}
+                                       src={engIcon}
+                                       additionalClasses={!engVisible ? s.not_active : ""}
+                />
+                <CustomButtonWithImage onClickFunc={toggleRuVisible}
+                                       src={ruIcon}
+                                       additionalClasses={!ruVisible ? s.not_active : ""}
+                />
+                <CustomButtonWithImage onClickFunc={shuffleWords}
+                                       src={shuffleIcon}
+                                       additionalClasses={s.shuffle_btn}
+                />
+            </div>
+
+            <CustomButtonWithImage onClickFunc={openMenu}
+                                   src={plusIcon}
+                                   additionalClasses={openMenuBTNClasses}
+            />
+        </>
     );
 };
 
 export default OptionsBlock;
+
+
+interface CustomButtonWithImageProps {
+    onClickFunc: () => void,
+    src: string,
+    additionalClasses?: string,
+}
+
+const CustomButtonWithImage: React.FC<CustomButtonWithImageProps> = (
+    {
+        onClickFunc,
+        src,
+        additionalClasses
+    }
+) => {
+    const classnames = s.option_button + " " + additionalClasses!
+    return (
+        <button onClick={onClickFunc}
+                className={classnames}
+        >
+            <img alt={src} src={src}/>
+        </button>
+    )
+}

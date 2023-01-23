@@ -1,0 +1,22 @@
+.resume_wrapper {
+    margin-top: 5px;
+}
+.resume_wrapper > * {
+    padding: 5px;
+}
+
+.name_and_profession {
+    width: 280px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.name_and_profession > * {
+    padding: 5px 15px;
+}
+.contacts_block {
+    width: 280px;
+}
+.contacts_block > div {
+    display: flex;
+    justify-content: space-between;
+}

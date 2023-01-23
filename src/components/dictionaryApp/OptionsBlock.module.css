@@ -1,47 +1,86 @@
 .option_block {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    padding: 10px 5px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.48);
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    transform: translateX(-50px);
+    transition: 0.4s ease-in-out;
 }
 
-.visible_btn {
-    font-weight: bolder;
-    font-size: 10px;
-    background: transparent;
+.option_active {
+    transition: 0.4s ease-in-out;
+    transform: translateX(0);
+}
+
+.option_button {
     width: 30px;
     height: 30px;
-    border: 1px solid lightgray;
-    border-radius: 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
     margin: 5px;
     cursor: pointer;
+    position: relative;
 }
-.visible_btn_active {
-    background-color: lightgray;
-    color: white;
+
+.not_active {
+    opacity: 0.5;
 }
+
+.option_button img {
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+}
+
+.open_menu_btn {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    transition: 0.4s ease-in-out;
+}
+
+.open_menu_btn_opened {
+    transform: rotate(135deg);
+}
+
 .shuffle_btn:hover {
-    animation: rotate_arrow  0.5s running ease-in-out;
+    animation: rotate_arrow 0.5s running ease-in-out;
 }
-
-
-
-
-
 
 @keyframes rotate_arrow {
     from {
         transform: rotateX(0deg);
     }
     25% {
-        transform: rotateX(90deg) ;
+        transform: rotateX(90deg);
     }
     50% {
-        transform: rotateX(180deg) ;
+        transform: rotateX(180deg);
     }
     75% {
-        transform: rotateX(270deg) ;
+        transform: rotateX(270deg);
     }
     to {
         transform: rotateX(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .open_menu_btn {
+        top: 0;
+    }
+
+    .option_block {
+        top: 50px;
     }
 }
 
