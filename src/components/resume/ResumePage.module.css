@@ -1,22 +1,107 @@
 .resume_wrapper {
-    margin-top: 5px;
+    margin: 5px auto;
+
 }
+
 .resume_wrapper > * {
-    padding: 5px;
+}
+
+.resume_wrapper > div {
+    /*border: 1px solid red;*/
+    margin: 5px;
 }
 
 .name_and_profession {
-    width: 280px;
+    grid-area: name;
+    min-width: 280px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 120px;
 }
+
 .name_and_profession > * {
-    padding: 5px 15px;
+    padding-left: 20px;
 }
+
+
 .contacts_block {
-    width: 280px;
+    grid-area: contacts;
+    min-width: 280px;
+    height: 120px;
 }
+
 .contacts_block > div {
+    padding: 0 5px;
+    height: 40px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.contacts_block img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.links {
+    grid-area: links;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.links > * {
+    border-radius: 100px;
+    -webkit-box-shadow: 0 0 10px 3px rgba(34, 60, 80, 0.2) ;
+    -moz-box-shadow: 0 0 10px 3px rgba(34, 60, 80, 0.2) ;
+    box-shadow: 0 0 10px 3px rgba(34, 60, 80, 0.2) ;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.links img {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.links img:hover {
+    height: 40px;
+    width: 40px;
+}
+
+@media (max-width: 4000px) {
+    .resume_wrapper {
+        display: grid;
+        grid-template-areas: 'name contacts'  'links links';
+    }
+}
+@media (max-width: 570px) {
+    .resume_wrapper {
+        display: grid;
+        grid-template-areas: 'name links' 'contacts links';
+        grid-template-columns: 5fr 1fr;
+    }
+    .links {
+        flex-direction: column;
+    }
+}
+@media (max-width: 360px) {
+    .resume_wrapper {
+        display: grid;
+        grid-template-areas: 'name' 'contacts'  'links';
+    }
+    .links {
+        flex-direction: row;
+    }
 }

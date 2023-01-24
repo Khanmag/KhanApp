@@ -1,0 +1,14 @@
+.wrapper {
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.wrapper h1, .wrapper p  {
+    text-align: center;
+    margin-top: 15px;
+}
+.wrapper img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
