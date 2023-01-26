@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/KhanApp/static/css/main.c2876df9.css",
-    "main.js": "/KhanApp/static/js/main.cbffbff9.js",
+    "main.css": "/KhanApp/static/css/main.c05a86a1.css",
+    "main.js": "/KhanApp/static/js/main.23844cf9.js",
     "static/media/creativeBG.png": "/KhanApp/static/media/creativeBG.686883e15cc4be928333.png",
     "static/media/shuffleIcon.png": "/KhanApp/static/media/shuffleIcon.8b9cf680416b4ad10d72.png",
     "static/media/cinema-icon-png-7.jpg": "/KhanApp/static/media/cinema-icon-png-7.e22ad1e888648e97b51c.jpg",
@@ -23,11 +23,11 @@
     "static/media/hh.png": "/KhanApp/static/media/hh.13c0f62e844c7c45c118.png",
     "static/media/locationIcon.png": "/KhanApp/static/media/locationIcon.8c24ebfa51289161831a.png",
     "index.html": "/KhanApp/index.html",
-    "main.c2876df9.css.map": "/KhanApp/static/css/main.c2876df9.css.map",
-    "main.cbffbff9.js.map": "/KhanApp/static/js/main.cbffbff9.js.map"
+    "main.c05a86a1.css.map": "/KhanApp/static/css/main.c05a86a1.css.map",
+    "main.23844cf9.js.map": "/KhanApp/static/js/main.23844cf9.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2876df9.css",
-    "static/js/main.cbffbff9.js"
+    "static/css/main.c05a86a1.css",
+    "static/js/main.23844cf9.js"
   ]
 }
