@@ -52,25 +52,19 @@
     transform: rotate(135deg);
 }
 
-.shuffle_btn:hover {
-    animation: rotate_arrow 0.5s running ease-in-out;
+.shuffle_btn:active {
+    animation: rotate_arrows 0.1s running ease-in-out;
 }
 
-@keyframes rotate_arrow {
+@keyframes rotate_arrows {
     from {
         transform: rotateX(0deg);
     }
-    25% {
+    50% {
         transform: rotateX(90deg);
     }
-    50% {
-        transform: rotateX(180deg);
-    }
-    75% {
-        transform: rotateX(270deg);
-    }
     to {
-        transform: rotateX(360deg);
+        transform: rotateX(180deg);
     }
 }
 

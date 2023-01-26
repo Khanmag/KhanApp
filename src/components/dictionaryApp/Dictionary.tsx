@@ -54,24 +54,24 @@ const Dictionary: React.FC = () => {
 
     if (words.length === 0) return <Preloader />
     return (
-        <div {...handlers}
-        >
+        <>
             <OptionsBlock toggleEngVisible={toggleEngVisible}
                           toggleRuVisible={toggleRuVisible}
                           engVisible={engVisible}
                           ruVisible={ruVisible}
                           shuffleWords={shuffleWords}
             />
-
-            {
-                words.map(word => (
-                    <div className={styles.words_row_container} key={word.eng}>
-                        {engVisible && <div className={styles.word_wrapper}>{word.eng}</div>}
-                        {ruVisible && <DetachRuWords ruWords={word.ru}/>}
-                    </div>
-                ))
-            }
-        </div>
+            <div {...handlers}>
+                {
+                    words.map(word => (
+                        <div className={styles.words_row_container} key={word.eng}>
+                            {engVisible && <div className={styles.word_wrapper}>{word.eng}</div>}
+                            {ruVisible && <DetachRuWords ruWords={word.ru}/>}
+                        </div>
+                    ))
+                }
+            </div>
+        </>
     );
 };
 
