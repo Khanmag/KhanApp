@@ -1,40 +1,75 @@
 import React from 'react';
 import s from "./Creativity.module.css"
+import animeIMG from '../../images/forCreativityPage/anime.png'
+import moviesIMG from '../../images/forCreativityPage/movies.jpeg'
+import musicIMG from '../../images/forCreativityPage/music.jpeg'
+import paintingsIMG from '../../images/forCreativityPage/paintings.jpeg'
+import booksIMG from '../../images/forCreativityPage/books.jpeg'
+import {NavLink} from "react-router-dom";
+import MediaBlog from "../../components/mediaBlog/MediaBlog";
 
 const Creativity = () => {
     return (
-            <div className={s.creativity_wrapper}>
-                <h2 className={s.general_title}>Creativity applications</h2>
-                <div className={s.grid_container}>
-                    <div>
-                        <img alt={''}
-                             src={'https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/10/Zaraki-Cropped.jpg'}/>
-                    </div>
-                    <div>
-                        <img alt={''}
-                             src={'https://studybreaks.com/wp-content/uploads/2020/06/watchmen_3-e1593659071752.jpg'}/>
-                    </div>
-                    <div>
-                        <img alt={''}
-                             src={'https://p4.wallpaperbetter.com/wallpaper/177/570/552/saitama-pinninja-opm-one-punch-man-wallpaper-preview.jpg'}/>
-                    </div>
-                    <div>
-                        <img alt={''}
-                             src={'https://domf5oio6qrcr.cloudfront.net/medialibrary/8718/brain-music-health-memory.jpg'}/>
-                    </div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
-                    <div>10</div>
-                </div>
+        <div className={s.creativity_wrapper}>
+            <h2 className={s.general_title}>Creativity applications</h2>
+            {/*<div className={s.grid_container}>*/}
+            {/*    {*/}
+            {/*        creativityData.map( item => (*/}
+            {/*            <ContentItem src={item.image} name={item.name} to={""} key={item.name}/>*/}
+            {/*        ))*/}
+            {/*    }*/}
+            {/*</div>*/}
+            <MediaBlog />
 
-            </div>
+        </div>
     );
 };
 
 export default Creativity;
+
+interface ContentItemProps {
+    src: string,
+    name: string,
+    to: string,
+}
+const ContentItem:React.FC<ContentItemProps> = ({src, name,to}) => {
+    return (
+        <div>
+            <NavLink to={to}>
+                <img alt={name} title={name} src={src} />
+                <div className={s.modal_block}>
+                    <p>{name}</p>
+                </div>
+            </NavLink>
+        </div>
+    )
+}
+
+
+
+
+const creativityData = [
+    {
+        name: 'anine',
+        image: animeIMG,
+    },
+    {
+        name: 'movies',
+        image: moviesIMG,
+    },
+    {
+        name: 'music',
+        image: musicIMG,
+    },
+    {
+        name: 'books',
+        image: booksIMG,
+    },
+    {
+        name: 'art',
+        image: paintingsIMG,
+    },
+
+]
 
 
