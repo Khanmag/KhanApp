@@ -2,10 +2,11 @@ import React from 'react';
 import Layout from "./Layout";
 import ResumePage from "./components/resume/ResumePage";
 import {Navigate, Route, Routes} from "react-router-dom";
-import Dictionary from "./components/dictionaryApp/Dictionary";
-import HomePage from "./components/homePage/HomePage";
-import Technical from "./components/technical/Technical";
-import Creativity from "./components/creativity/Creativity";
+import Dictionary from "./apps/dictionary/Dictionary";
+import HomePage from "./pages/home/HomePage";
+import Technical from "./pages/technical/Technical";
+import Creativity from "./pages/creativity/Creativity";
+import PageInProcess from "./components/pageInProcess/PageInProcess";
 
 const App: React.FC = () => {
 
@@ -18,6 +19,7 @@ const App: React.FC = () => {
                 <Route path={'creativity'} element={<Creativity/>}/>
                 <Route path={'resume'} element={<ResumePage/>}/>
                 <Route path={'technical/dictionary'} element={<Dictionary/>}/>
+                <Route path={'technical/noReady'} element={<PageInProcess/>}/>
             </Route>
         </Routes>
     );

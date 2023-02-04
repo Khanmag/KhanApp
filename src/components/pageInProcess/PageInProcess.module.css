@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+    min-height: calc( 100vh - 100px);
+    background-image: url("../../images/development-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container h3 {
+    text-align: center;
+    font-weight: normal;
+    padding: 30px;
+    text-transform: uppercase;
+}
+.container button {
+    padding: 10px;
+    background-color: lightblue;
+    color: black;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.container button:hover {
+    transform: skew(10deg);
+}
+.container button:active {
+    transition-duration: 0.3s;
+    transform: translateX(-15px);
+}

@@ -14,9 +14,9 @@ const Technical = () => {
             <div className={s.app_container}>
 
                 <AppItem to={'dictionary'} src={dictionaryIMG} name={'dictionary'} />
-                <AppItem to={'dictionary'} src={cinemaIMG} name={'cinema'} />
-                <AppItem to={'dictionary'} src={animeIMG} name={'anime'} />
-                <AppItem to={'dictionary'} src={summaryIMG} name={'summary'} />
+                <AppItem to={'noReady'} src={animeIMG} name={'since'} />
+                <AppItem to={'noReady'} src={cinemaIMG} name={'history'} />
+                <AppItem to={'noReady'} src={summaryIMG} name={'IT'} />
 
             </div>
 

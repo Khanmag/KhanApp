@@ -1,48 +1,40 @@
 import React from 'react';
 import s from './NavMenu.module.css'
 import {NavLink} from "react-router-dom";
-import leftBrain from '../../images/OoGOwVq.png'
-import rightBrain from '../../images/P1ZxZNr.png'
 import resumeIcon from '../../images/cv.png'
 import homeIcon from '../../images/house.png'
+import BrainBlock from "./BrainBlock";
 
 const NavMenu = () => {
-
     return (
         <div className={s.menu}>
-            <div className={s.brain_block}>
-                <NavLink className={({isActive}) => isActive ? s.active_left + " " + s.left_part : s.left_part}
-                         to={'/technical'}
-                >
-                    <p>Technical</p>
-                    <img alt={'left'} src={leftBrain}/>
-                </NavLink>
-                <NavLink className={({isActive}) => isActive ? s.active_right + " " + s.right_part : s.right_part}
-                         to={'/creativity'}
-                >
-                    <img alt='right' src={rightBrain}/>
-                    <p>Creativity</p>
-                </NavLink>
-            </div>
-            <div className={s.menu_item}>
-                <NavLink className={({isActive}) => isActive ? s.active_item : ''}
-                         to={'/home'}
-                >
-                    <img alt='right' src={homeIcon}/>
-                    <p>Home</p>
-                </NavLink>
-            </div>
-            <div className={s.menu_item}>
-                <NavLink className={({isActive}) => isActive ? s.active_item : ''}
-                         to={'/resume'}
-                >
-                    <img alt='right' src={resumeIcon}/>
-                    <p>Resume</p>
-                </NavLink>
-            </div>
+            <BrainBlock />
+            <MenuNavLink to={'/home'} src={homeIcon} title={'Home'}/>
+            <MenuNavLink to={'/resume'} src={resumeIcon} title={'Resume'}/>
         </div>
     );
 };
 
 export default NavMenu;
+
+
+interface MenuNavLinkProps {
+    to: string,
+    src: string,
+    title: string,
+}
+const MenuNavLink:React.FC<MenuNavLinkProps> = ({to, src, title}) => {
+    return (
+        <div className={s.menu_item}>
+            <NavLink className={({isActive}) => isActive ? s.active_item : ''}
+                     to={to}
+            >
+                <img alt='menu item' src={src}/>
+                <p>{title}</p>
+            </NavLink>
+        </div>
+    )
+}
+
+
 

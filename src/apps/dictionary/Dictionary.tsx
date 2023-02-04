@@ -3,7 +3,9 @@ import axios from "axios";
 import styles from './Dictionary.module.css'
 import OptionsBlock from "./OptionsBlock";
 import {useSwipeable} from "react-swipeable";
-import Preloader from "../common/Preloader";
+import Preloader from "../../components/common/Preloader";
+import {useDispatch, useSelector} from "react-redux";
+import {addWord} from "../../store/slices/dictionarySlice";
 
 interface IWordItem {
     eng: string,

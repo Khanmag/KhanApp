@@ -33,6 +33,7 @@ const ResumePage = () => {
                     <p>HTML</p>
                 </div>
             </div>
+
         </div>
 
     );

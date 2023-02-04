@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -6,9 +7,7 @@
     font-family: 'Comfortaa', cursive;
     -webkit-tap-highlight-color: transparent;
 }
-body {
-    /*height: 100vh;*/
-}
+
 .header {
     width: 100%;
     background-color: dimgray;
@@ -20,16 +19,30 @@ body {
 .main {
     max-width: 800px;
     margin: 0 auto;
-    /*min-height: 80vh ;*/
-    min-height: calc(100vh - 50px);
-    /*background-color: lightblue;*/
+    min-height: calc(100vh - 100px);
+    overflow: hidden;
 }
 .footer {
     height: 50px;
     background-color: black;
 }
+
+
+@media (max-width: 800px) {
+    .main {
+        max-width: calc(100vw - 18px);
+        overflow: hidden;
+    }
+}
 @media (max-width: 600px) {
     .header {
-        height: 0;
+        position: fixed;
+        bottom: 0;
+    }
+    .footer {
+        margin-bottom: 50px ;
+    }
+    .main {
+        min-height: calc(100vh - 50px);
     }
 }

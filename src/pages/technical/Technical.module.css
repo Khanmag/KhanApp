@@ -28,6 +28,10 @@
     -moz-box-shadow: 7px 5px 5px 0 rgba(105, 154, 191, 0.6);
     box-shadow: 7px 5px 5px 0 rgba(105, 154, 191, 0.6);
 }
+.app_item:hover {
+    transition-duration: 0.3s;
+    transform: skewY(-5deg);
+}
 .app_item img {
     width: 90%;
     margin: 5%;
