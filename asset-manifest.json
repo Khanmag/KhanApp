@@ -1,14 +1,19 @@
 {
   "files": {
-    "main.css": "/KhanApp/static/css/main.c05a86a1.css",
-    "main.js": "/KhanApp/static/js/main.23844cf9.js",
-    "static/media/creativeBG.png": "/KhanApp/static/media/creativeBG.686883e15cc4be928333.png",
+    "main.css": "/KhanApp/static/css/main.fac6e5fc.css",
+    "main.js": "/KhanApp/static/js/main.29aa221e.js",
+    "static/media/anime.png": "/KhanApp/static/media/anime.4ab7339dcf6c0e758682.png",
+    "static/media/books.jpeg": "/KhanApp/static/media/books.79e039afeb73d42cd3fe.jpeg",
+    "static/media/music.jpeg": "/KhanApp/static/media/music.a6e80749e752bb525574.jpeg",
     "static/media/shuffleIcon.png": "/KhanApp/static/media/shuffleIcon.8b9cf680416b4ad10d72.png",
+    "static/media/movies.jpeg": "/KhanApp/static/media/movies.94dabf0e319ca22c971f.jpeg",
     "static/media/cinema-icon-png-7.jpg": "/KhanApp/static/media/cinema-icon-png-7.e22ad1e888648e97b51c.jpg",
     "static/media/P1ZxZNr.png": "/KhanApp/static/media/P1ZxZNr.d3105ae967f1e58d7f1f.png",
     "static/media/opm.png": "/KhanApp/static/media/opm.4d7bfc16560d88c77e04.png",
+    "static/media/development-removebg-preview.png": "/KhanApp/static/media/development-removebg-preview.a304a04d474f7d3d5092.png",
     "static/media/full_wheiagom.png": "/KhanApp/static/media/full_wheiagom.2d4738e011fb419da787.png",
     "static/media/OoGOwVq.png": "/KhanApp/static/media/OoGOwVq.f91325fc6b834ad89765.png",
+    "static/media/paintings.jpeg": "/KhanApp/static/media/paintings.e5837f65988ec73f41b6.jpeg",
     "static/media/ruIcon.png": "/KhanApp/static/media/ruIcon.88c4d06f5589c5543317.png",
     "static/media/welcomeImage.png": "/KhanApp/static/media/welcomeImage.635221f5ca56d22a645f.png",
     "static/media/dictionaryImage.png": "/KhanApp/static/media/dictionaryImage.08b8c141c5a1a8671339.png",
@@ -23,11 +28,11 @@
     "static/media/hh.png": "/KhanApp/static/media/hh.13c0f62e844c7c45c118.png",
     "static/media/locationIcon.png": "/KhanApp/static/media/locationIcon.8c24ebfa51289161831a.png",
     "index.html": "/KhanApp/index.html",
-    "main.c05a86a1.css.map": "/KhanApp/static/css/main.c05a86a1.css.map",
-    "main.23844cf9.js.map": "/KhanApp/static/js/main.23844cf9.js.map"
+    "main.fac6e5fc.css.map": "/KhanApp/static/css/main.fac6e5fc.css.map",
+    "main.29aa221e.js.map": "/KhanApp/static/js/main.29aa221e.js.map"
   },
   "entrypoints": [
-    "static/css/main.c05a86a1.css",
-    "static/js/main.23844cf9.js"
+    "static/css/main.fac6e5fc.css",
+    "static/js/main.29aa221e.js"
   ]
 }
