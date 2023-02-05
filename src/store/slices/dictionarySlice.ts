@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {IWord} from "../../models/dictionary";
 
 interface dictionaryState {
@@ -8,22 +8,33 @@ interface dictionaryState {
 }
 
 const initialState: dictionaryState = {
-    words: [{eng: 'test', ru: "test2"}],
+    words: [],
     isLoading: false,
     hasError: null,
 }
 
 
-const dictionarySlice = createSlice({
+export const dictionarySlice = createSlice({
     name: 'dictionary',
     initialState,
     reducers: {
-        addWord(state, action) {},
-        removeWord() {},
-        toggleOrder() {},
+        dictFetching(state) {
+            state.isLoading = true;
+        },
+        dictFetchingSuccess(state, action: PayloadAction<IWord[]>) {
+            state.isLoading = false;
+            state.hasError = null;
+            state.words = action.payload;
+        },
+        dictFetchingError(state, action: PayloadAction<string>) {
+            state.isLoading = false;
+            state.hasError = action.payload;
+        },
+        shuffleWords(state) {
+            state.words = [...state.words].sort(() => Math.random() > 0.5 ? 1 : -1)
+        },
     },
 });
 
-export const {addWord} = dictionarySlice.actions
 
 export default dictionarySlice.reducer

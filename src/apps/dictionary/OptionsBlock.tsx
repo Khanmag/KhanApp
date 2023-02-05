@@ -7,46 +7,60 @@ import plusIcon from '../../images/plusIcon.png'
 import engIcon from '../../images/engIcon.png'
 import ruIcon from '../../images/ruIcon.png'
 import shuffleIcon from '../../images/shuffleIcon.png'
+import {useAppDispatch} from "../../hooks/redux";
+import {dictionarySlice} from "../../store/slices/dictionarySlice";
 
 
 interface OptionsBlockProps {
-    toggleEngVisible: () => void,
-    toggleRuVisible: () => void,
+    setEngVisible: (arg:boolean) => void,
+    setRuVisible: (arg:boolean) => void,
     engVisible: boolean,
     ruVisible: boolean,
-    shuffleWords: () => void,
 }
 
 const OptionsBlock: React.FC<OptionsBlockProps> = (
     {
-        toggleEngVisible,
-        toggleRuVisible,
+        setEngVisible,
+        setRuVisible,
         ruVisible,
         engVisible,
-        shuffleWords
     }
 ) => {
 
     const [optionsVisible, setOptionsVisible] = useState(false)
 
+    // for shuffle btn
+    const dispatch = useAppDispatch()
+    const {shuffleWords} = dictionarySlice.actions
+
+    // for go back btn
     const navigate = useNavigate()
+    const goBack = () => {
+        navigate(-1)
+    }
+
+    const toggleEngVisible = () => {
+        if (ruVisible) setEngVisible(!engVisible)
+    }
+    const toggleRuVisible = () => {
+        if (engVisible) setRuVisible(!ruVisible)
+    }
+
+    const toggleMenuOpening = () => {
+        setOptionsVisible(!optionsVisible)
+    }
 
     const handlers = useSwipeable({
         onSwipedLeft: () => setOptionsVisible(false)
     })
 
-    const getBack = () => {
-        navigate(-1)
-    }
-    const openMenu = () => {
-        setOptionsVisible(!optionsVisible)
-    }
+
     const openMenuBTNClasses = s.open_menu_btn + " " + (optionsVisible ? s.open_menu_btn_opened : "")
 
     return (
         <>
             <div {...handlers} className={s.option_block + " " + (optionsVisible ? s.option_active : "")}>
-                <CustomButtonWithImage onClickFunc={getBack}
+                <CustomButtonWithImage onClickFunc={goBack}
                                        src={backIcon}
                 />
                 <CustomButtonWithImage onClickFunc={toggleEngVisible}
@@ -57,13 +71,13 @@ const OptionsBlock: React.FC<OptionsBlockProps> = (
                                        src={ruIcon}
                                        additionalClasses={!ruVisible ? s.not_active : ""}
                 />
-                <CustomButtonWithImage onClickFunc={shuffleWords}
+                <CustomButtonWithImage onClickFunc={() => dispatch(shuffleWords())}
                                        src={shuffleIcon}
                                        additionalClasses={s.shuffle_btn}
                 />
             </div>
 
-            <CustomButtonWithImage onClickFunc={openMenu}
+            <CustomButtonWithImage onClickFunc={toggleMenuOpening}
                                    src={plusIcon}
                                    additionalClasses={openMenuBTNClasses}
             />
