@@ -1,0 +1,6 @@
+.duration_block > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.28) inset;
+}

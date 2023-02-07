@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import styles from "./Dictionary.module.css";
+import s from "./WordsList.module.css";
 import {useSwipeable} from "react-swipeable";
 import {fetchDict} from "../../store/slices/ActionCreators";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
@@ -10,8 +10,8 @@ import PageInProcess from "../../components/pageInProcess/PageInProcess";
 interface WordsListProps{
     engVisible: boolean,
     ruVisible: boolean,
-    setEngVisible: (a:boolean) => void,
-    setRuVisible: (a:boolean) => void,
+    setEngVisible: (arg:boolean) => void,
+    setRuVisible: (arg:boolean) => void,
 }
 
 const WordsList:React.FC<WordsListProps> = ({engVisible, ruVisible, setEngVisible, setRuVisible}) => {
@@ -37,13 +37,12 @@ const WordsList:React.FC<WordsListProps> = ({engVisible, ruVisible, setEngVisibl
 
     if (isLoading) return <Preloader />
     if (hasError) return <PageInProcess />
-
     return (
         <div {...handlers}>
             {
                 words.map(word => (
-                    <div className={styles.words_row_container} key={word.eng}>
-                        {engVisible && <div className={styles.word_wrapper}>{word.eng}</div>}
+                    <div className={s.words_row_container} key={word.eng}>
+                        {engVisible && <div className={s.word_wrapper}>{word.eng}</div>}
                         {ruVisible && <DetachRuWords ruWords={word.ru}/>}
                     </div>
                 ))
@@ -55,17 +54,13 @@ const WordsList:React.FC<WordsListProps> = ({engVisible, ruVisible, setEngVisibl
 export default WordsList;
 
 
-interface detachRuWordsProps {
-    ruWords: string,
-}
-
-const DetachRuWords: React.FC<detachRuWordsProps> = ({ruWords}) => {
+const DetachRuWords = ({ruWords}:{ruWords:string}) => {
     const arr = ruWords.split(', ')
     return (
-        <div className={styles.ru_words_wrapper}>
+        <div className={s.ru_words_wrapper}>
             {
                 arr.map(item => (
-                    <div key={item} className={styles.word_wrapper}>
+                    <div key={item} className={s.word_wrapper}>
                         {item}
                     </div>
                 ))

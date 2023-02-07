@@ -1,0 +1,28 @@
+.container {
+    max-width: 750px;
+    margin: 10px auto;
+    min-height: 400px;
+    background-color: #494949;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 300px;
+    padding: 10px;
+    grid-gap: 10px;
+    color: white;
+}
+
+.container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.info_container {
+    display: flex;
+    flex-direction: column;
+}
+.info_container h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+

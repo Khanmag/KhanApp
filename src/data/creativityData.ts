@@ -6,7 +6,7 @@ import paintingsIMG from "../images/forCreativityPage/paintings.jpeg";
 
 export const creativityData = [
     {
-        name: 'anine',
+        name: 'anime',
         image: animeIMG,
     },
     {

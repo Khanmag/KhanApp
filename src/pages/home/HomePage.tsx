@@ -6,7 +6,9 @@ const HomePage = () => {
     return (
         <div className={s.wrapper}>
             <h1>Welcome</h1>
-            <p>Try every page on this web site and enjoy</p>
+            <p>This site is my collection.
+                A set of applications that I need and lists of masterpieces that I want to share.
+            </p>
 
             <img alt={'welcome'} src={welcomeImage} />
         </div>

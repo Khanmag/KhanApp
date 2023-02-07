@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import {useSwipeable} from "react-swipeable";
+import {useAppDispatch} from "../../hooks/redux";
+import {dictionarySlice} from "../../store/slices/dictionarySlice";
 import s from './OptionsBlock.module.css'
 import backIcon from '../../images/backIcon.png'
 import plusIcon from '../../images/plusIcon.png'
 import engIcon from '../../images/engIcon.png'
 import ruIcon from '../../images/ruIcon.png'
 import shuffleIcon from '../../images/shuffleIcon.png'
-import {useAppDispatch} from "../../hooks/redux";
-import {dictionarySlice} from "../../store/slices/dictionarySlice";
 
 
 interface OptionsBlockProps {
@@ -53,7 +53,6 @@ const OptionsBlock: React.FC<OptionsBlockProps> = (
     const handlers = useSwipeable({
         onSwipedLeft: () => setOptionsVisible(false)
     })
-
 
     const openMenuBTNClasses = s.open_menu_btn + " " + (optionsVisible ? s.open_menu_btn_opened : "")
 

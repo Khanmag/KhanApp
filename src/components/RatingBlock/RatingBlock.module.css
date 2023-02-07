@@ -1,0 +1,28 @@
+.rating_block {
+    display: grid;
+    width: 220px;
+    /*border: 1px solid red;*/
+    grid-template-columns: 2fr 1fr;
+    margin: 10px;
+}
+.rating_block > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.rating_block > div:nth-child(2) > span {
+    font-size: 30px;
+    line-height: 30px;
+    vertical-align: center;
+    padding: 14px;
+    background-color: white;
+    color: black;
+    border-radius: 80px;
+}
+.option_rating > div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}

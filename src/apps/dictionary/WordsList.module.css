@@ -1,0 +1,39 @@
+.words_row_container {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(128, 128, 128, 0.52);
+    padding: 5px;
+}
+.words_row_container:hover .word_wrapper {
+    background-color: #ffe750;
+}
+.word_wrapper {
+    -webkit-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2) ;
+    -moz-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2) ;
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2) ;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    max-width: max-content;
+}
+
+.ru_words_wrapper {
+    display: flex;
+    max-width: max-content;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+
+@media (max-width: 400px) {
+    .words_row_container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .ru_words_wrapper {
+        align-self: end;
+    }
+}

@@ -8,7 +8,7 @@ const MediaBlog:React.FC = () => {
         <div className={s.container}>
             {
                 creativityData.map( item => (
-                    <ContentItem src={item.image} name={item.name} to={""} key={item.name}/>
+                    <ContentItem src={item.image} name={item.name} to={item.name} key={item.name}/>
                 ))
             }
         </div>
