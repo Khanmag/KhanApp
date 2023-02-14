@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/KhanApp/static/css/main.fac6e5fc.css",
-    "main.js": "/KhanApp/static/js/main.29aa221e.js",
+    "main.css": "/KhanApp/static/css/main.81c95b18.css",
+    "main.js": "/KhanApp/static/js/main.b9a2a1ff.js",
     "static/media/anime.png": "/KhanApp/static/media/anime.4ab7339dcf6c0e758682.png",
-    "static/media/books.jpeg": "/KhanApp/static/media/books.79e039afeb73d42cd3fe.jpeg",
-    "static/media/music.jpeg": "/KhanApp/static/media/music.a6e80749e752bb525574.jpeg",
     "static/media/shuffleIcon.png": "/KhanApp/static/media/shuffleIcon.8b9cf680416b4ad10d72.png",
     "static/media/movies.jpeg": "/KhanApp/static/media/movies.94dabf0e319ca22c971f.jpeg",
+    "static/media/manga.jpeg": "/KhanApp/static/media/manga.322827be454b7744fc44.jpeg",
     "static/media/cinema-icon-png-7.jpg": "/KhanApp/static/media/cinema-icon-png-7.e22ad1e888648e97b51c.jpg",
     "static/media/P1ZxZNr.png": "/KhanApp/static/media/P1ZxZNr.d3105ae967f1e58d7f1f.png",
     "static/media/opm.png": "/KhanApp/static/media/opm.4d7bfc16560d88c77e04.png",
+    "static/media/art.jpeg": "/KhanApp/static/media/art.d90424330034cfab9a10.jpeg",
     "static/media/development-removebg-preview.png": "/KhanApp/static/media/development-removebg-preview.a304a04d474f7d3d5092.png",
     "static/media/full_wheiagom.png": "/KhanApp/static/media/full_wheiagom.2d4738e011fb419da787.png",
+    "static/media/books.jpeg": "/KhanApp/static/media/books.e656a8508f1912dcc302.jpeg",
     "static/media/OoGOwVq.png": "/KhanApp/static/media/OoGOwVq.f91325fc6b834ad89765.png",
-    "static/media/paintings.jpeg": "/KhanApp/static/media/paintings.e5837f65988ec73f41b6.jpeg",
+    "static/media/comics.jpeg": "/KhanApp/static/media/comics.2d71b9cff70e1ce9bf75.jpeg",
     "static/media/ruIcon.png": "/KhanApp/static/media/ruIcon.88c4d06f5589c5543317.png",
+    "static/media/berserk.jpeg": "/KhanApp/static/media/berserk.29bd94b8756e594b7190.jpeg",
+    "static/media/music.jpeg": "/KhanApp/static/media/music.b79e5dcbc9ecd017c2dd.jpeg",
     "static/media/welcomeImage.png": "/KhanApp/static/media/welcomeImage.635221f5ca56d22a645f.png",
     "static/media/dictionaryImage.png": "/KhanApp/static/media/dictionaryImage.08b8c141c5a1a8671339.png",
+    "static/media/serials.jpeg": "/KhanApp/static/media/serials.9a94c4c758194e87f288.jpeg",
     "static/media/engIcon.png": "/KhanApp/static/media/engIcon.3745e7eba73ad928a297.png",
     "static/media/house.png": "/KhanApp/static/media/house.17e52db83442b6a081be.png",
     "static/media/mob.png": "/KhanApp/static/media/mob.84fa27f2eff734e75675.png",
@@ -28,11 +32,11 @@
     "static/media/hh.png": "/KhanApp/static/media/hh.13c0f62e844c7c45c118.png",
     "static/media/locationIcon.png": "/KhanApp/static/media/locationIcon.8c24ebfa51289161831a.png",
     "index.html": "/KhanApp/index.html",
-    "main.fac6e5fc.css.map": "/KhanApp/static/css/main.fac6e5fc.css.map",
-    "main.29aa221e.js.map": "/KhanApp/static/js/main.29aa221e.js.map"
+    "main.81c95b18.css.map": "/KhanApp/static/css/main.81c95b18.css.map",
+    "main.b9a2a1ff.js.map": "/KhanApp/static/js/main.b9a2a1ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.fac6e5fc.css",
-    "static/js/main.29aa221e.js"
+    "static/css/main.81c95b18.css",
+    "static/js/main.b9a2a1ff.js"
   ]
 }
